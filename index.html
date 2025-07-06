@@ -57,12 +57,15 @@
       font-size: 1.2rem;
       transition: transform 0.3s ease;
     }
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
-      transition: max-height 0.5s ease;
-      overflow: hidden;
+      min-width: 700px;
     }
     thead th {
       background-color: #007ACC;
@@ -103,8 +106,8 @@
       font-size: 0.8rem;
       margin: 40px 0 20px 0;
       width: 100%;
+      padding: 10px 20px;
     }
-    /* 回到頂部按鈕 */
     #topBtn {
       position: fixed;
       bottom: 30px;
@@ -124,15 +127,11 @@
     #topBtn:hover {
       background: #004A99;
     }
-    /* 收合內容 */
     .content-collapsed {
-      overflow: hidden;
-      transition: max-height 0.5s ease;
       display: none;
     }
     .content-expanded {
-      transition: max-height 0.5s ease;
-      display: table;
+      display: block;
     }
   </style>
 </head>
@@ -142,135 +141,136 @@
   </header>
   <main>
     <section>
-      <h2>Day 1｜8/4（一） 鳳山 → 台東 <span class="arrow">▼</span></h2>
-      <table class="content-expanded">
-        <thead>
-          <tr>
-            <th>車次</th>
-            <th>發車時間</th>
-            <th>到達時間</th>
-            <th>交通方式</th>
-            <th>租車價格</th>
-            <th>火車票價</th>
-            <th>飯店價格</th>
-            <th>備註</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>自強(3000) 431</td>
-            <td>12:59</td>
-            <td>15:07</td>
-            <td>翔順機車(機車)</td>
-            <td>$850</td>
-            <td>$470</td>
-            <td>$1232</td>
-            <td>熱氣球光雕FEAT無人機+煙火</td>
-          </tr>
-        </tbody>
-      </table>
-<p class="note">
-  住宿：
-  <a href="https://www.agoda.com/zh-tw/h-taitung-chun-yang/hotel/taitung-tw.html?ds=kxwMdD1ZA2UMuQSU" target="_blank" rel="noopener noreferrer">春秧無人別館</a></p>
+      <h2 aria-expanded="true">Day 1｜8/4（一） 鳳山 → 台東 <span class="arrow">▼</span></h2>
+      <div class="table-container content-expanded">
+        <table>
+          <thead>
+            <tr>
+              <th>車次</th>
+              <th>發車時間</th>
+              <th>到達時間</th>
+              <th>交通方式</th>
+              <th>租車價格</th>
+              <th>火車票價</th>
+              <th>飯店價格</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>自強(3000) 431</td>
+              <td>12:59</td>
+              <td>15:07</td>
+              <td>翔順機車(機車)</td>
+              <td>$850</td>
+              <td>$470</td>
+              <td>$1232</td>
+              <td>熱氣球光雕FEAT無人機+煙火</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/h-taitung-chun-yang/hotel/taitung-tw.html?ds=kxwMdD1ZA2UMuQSU" target="_blank" rel="noopener noreferrer">春秧無人別館</a></p>
     </section>
 
     <section>
-      <h2>Day 2｜8/5（二） 台東 → 花蓮 <span class="arrow">▶</span></h2>
-      <table class="content-collapsed">
-        <thead>
-          <tr>
-            <th>車次</th>
-            <th>發車時間</th>
-            <th>到達時間</th>
-            <th>交通方式</th>
-            <th>租車價格</th>
-            <th>火車票價</th>
-            <th>飯店價格</th>
-            <th>備註</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>自強(3000) 411</td>
-            <td>07:43</td>
-            <td>09:50</td>
-            <td>行易租車(機車)</td>
-            <td>$900</td>
-            <td>$462</td>
-            <td>$993</td>
-            <td>遠雄海洋世界門票+海洋體驗($3199)</td>
-          </tr>
-        </tbody>
-      </table>
-<p class="note">
-  住宿：
-  <a href="https://www.agoda.com/zh-tw/true-friend-hotel/hotel/hualien-tw.html?countryId=140&finalPriceView=1&isShowMobileAppPrice=false&cid=1844104&numberOfBedrooms=&familyMode=false&adults=2&children=0&rooms=1&maxRooms=0&checkIn=2025-08-5&isCalendarCallout=false&childAges=&numberOfGuest=0&missingChildAges=false&travellerType=1&showReviewSubmissionEntry=false&currencyCode=TWD&isFreeOccSearch=false&tspTypes=9&los=1&searchrequestid=a5198c77-dbd8-449a-9ce4-167b6c3f68c5&ds=kxwMdD1ZA2UMuQSU" target="_blank" rel="noopener noreferrer">路境行旅花蓮文化館</a></p>
+      <h2 aria-expanded="false">Day 2｜8/5（二） 台東 → 花蓮 <span class="arrow">▶</span></h2>
+      <div class="table-container content-collapsed">
+        <table>
+          <thead>
+            <tr>
+              <th>車次</th>
+              <th>發車時間</th>
+              <th>到達時間</th>
+              <th>交通方式</th>
+              <th>租車價格</th>
+              <th>火車票價</th>
+              <th>飯店價格</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>自強(3000) 411</td>
+              <td>07:43</td>
+              <td>09:50</td>
+              <td>行易租車(機車)</td>
+              <td>$900</td>
+              <td>$462</td>
+              <td>$993</td>
+              <td>遠雄海洋世界門票+海洋體驗($3199)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/true-friend-hotel/hotel/hualien-tw.html?..." target="_blank" rel="noopener noreferrer">路境行旅花蓮文化館</a></p>
     </section>
 
     <section>
-      <h2>Day 3｜8/6（三） 花蓮 → 台北（大稻埕煙火） <span class="arrow">▶</span></h2>
-      <table class="content-collapsed">
-                <thead>
-          <tr>
-            <th>車次</th>
-            <th>發車時間</th>
-            <th>到達時間</th>
-            <th>交通方式</th>
-            <th>租車價格</th>
-            <th>火車票價</th>
-            <th>飯店價格</th>
-            <th>備註</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>自強(3000) 411</td>
-            <td>09:55</td>
-            <td>12:25</td>
-            <td>大眾運輸</td>
-            <td>$0</td>
-            <td>$583</td>
-            <td>$1300</td>
-            <td>大稻埕煙火</td>
-          </tr>
-        </tbody>
-      </table>
-<p class="note">
-  住宿：
-  <a href="https://www.agoda.com/zh-tw/fortune-hiya-taipei/hotel/taipei-tw.html?ds=tr8CbqZcGQgG92A8" target="_blank" rel="noopener noreferrer">承攜行旅台北重慶館</a></p>
+      <h2 aria-expanded="false">Day 3｜8/6（三） 花蓮 → 台北（大稻埕煙火） <span class="arrow">▶</span></h2>
+      <div class="table-container content-collapsed">
+        <table>
+          <thead>
+            <tr>
+              <th>車次</th>
+              <th>發車時間</th>
+              <th>到達時間</th>
+              <th>交通方式</th>
+              <th>租車價格</th>
+              <th>火車票價</th>
+              <th>飯店價格</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>自強(3000) 411</td>
+              <td>09:55</td>
+              <td>12:25</td>
+              <td>大眾運輸</td>
+              <td>$0</td>
+              <td>$583</td>
+              <td>$1300</td>
+              <td>大稻埕煙火</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/fortune-hiya-taipei/hotel/taipei-tw.html?..." target="_blank" rel="noopener noreferrer">承攜行旅台北重慶館</a></p>
     </section>
 
     <section>
-      <h2>Day 4｜8/7（四） 台北 → 鳳山 <span class="arrow">▶</span></h2>
-      <table class="content-collapsed">
-                <thead>
-          <tr>
-            <th>車次</th>
-            <th>發車時間</th>
-            <th>到達時間</th>
-            <th>交通方式</th>
-            <th>租車價格</th>
-            <th>客運票價</th>
-            <th>飯店價格</th>
-            <th>總額</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>和欣客運</td>
-            <td></td>
-            <td></td>
-            <td>大眾運輸</td>
-            <td>$0</td>
-            <td>$760</td>
-            <td>$0</td>
-            <td>8111/人</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2 aria-expanded="false">Day 4｜8/7（四） 台北 → 鳳山 <span class="arrow">▶</span></h2>
+      <div class="table-container content-collapsed">
+        <table>
+          <thead>
+            <tr>
+              <th>車次</th>
+              <th>發車時間</th>
+              <th>到達時間</th>
+              <th>交通方式</th>
+              <th>租車價格</th>
+              <th>客運票價</th>
+              <th>飯店價格</th>
+              <th>總額</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>和欣客運</td>
+              <td></td>
+              <td></td>
+              <td>大眾運輸</td>
+              <td>$0</td>
+              <td>$760</td>
+              <td>$0</td>
+              <td>8111/人</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
       <p class="note">結束愉快旅程!</p>
     </section>
-
   </main>
 
   <button id="topBtn" title="回到頂部">↑</button>
@@ -283,44 +283,24 @@
     // 展開/收合功能
     document.querySelectorAll('h2').forEach(sectionTitle => {
       sectionTitle.addEventListener('click', () => {
-        const table = sectionTitle.nextElementSibling;
+        const container = sectionTitle.nextElementSibling;
         const arrow = sectionTitle.querySelector('.arrow');
+        const expanded = container.classList.contains('content-expanded');
 
-        if (table.classList.contains('content-expanded')) {
-          table.classList.remove('content-expanded');
-          table.classList.add('content-collapsed');
-          arrow.textContent = '▶';
-        } else {
-          table.classList.remove('content-collapsed');
-          table.classList.add('content-expanded');
-          arrow.textContent = '▼';
-        }
+        container.classList.toggle('content-expanded', !expanded);
+        container.classList.toggle('content-collapsed', expanded);
+        arrow.textContent = expanded ? '▶' : '▼';
+        sectionTitle.setAttribute('aria-expanded', !expanded);
       });
     });
 
-    // 初始化箭頭狀態
-    document.querySelectorAll('h2').forEach((sectionTitle) => {
-      const arrow = sectionTitle.querySelector('.arrow');
-      const table = sectionTitle.nextElementSibling;
-      if (table.classList.contains('content-expanded')) {
-        arrow.textContent = '▼';
-      } else {
-        arrow.textContent = '▶';
-      }
-    });
-
-    // 回到頂部按鈕顯示邏輯
+    // 回到頂部按鈕邏輯
     const topBtn = document.getElementById('topBtn');
-    window.onscroll = function() {
-      if (document.documentElement.scrollTop > 300) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
-      }
+    window.onscroll = () => {
+      topBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
     };
-
     topBtn.addEventListener('click', () => {
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   </script>
 </body>
