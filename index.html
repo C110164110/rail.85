@@ -2,19 +2,21 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>鳳山出發逆時針環島 2025 行程</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       font-family: 'Noto Sans TC', sans-serif;
-      background: linear-gradient(135deg, #007ACC, #00B4F4);
-      margin: 0; padding: 0;
       color: #333;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      background: linear-gradient(135deg, #007ACC, #00B4F4);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      line-height: 1.6;
+      font-size: 16px;
+      overscroll-behavior-y: none;
     }
     header {
       background: #004A99;
@@ -25,19 +27,18 @@
       font-weight: 700;
       letter-spacing: 2px;
       width: 100%;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
     }
     main {
       max-width: 900px;
-      margin: 30px 15px;
+      margin: 30px auto;
       background: white;
-      padding: 25px 30px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 25px 20px;
       border-radius: 12px;
-      width: 100%;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
     h2 {
       border-bottom: 3px solid #007ACC;
@@ -57,6 +58,7 @@
       font-size: 1.2rem;
       transition: transform 0.3s ease;
     }
+
     .table-container {
       width: 100%;
       overflow-x: auto;
@@ -65,15 +67,14 @@
       width: 100%;
       border-collapse: collapse;
       margin-top: 15px;
-      min-width: 700px;
     }
     thead th {
       background-color: #007ACC;
       color: white;
+      padding: 8px 12px;
       position: sticky;
       top: 0;
       z-index: 10;
-      padding: 8px 12px;
       text-align: center;
     }
     tbody tr {
@@ -91,9 +92,6 @@
     tr:nth-child(even) {
       background-color: #f9faff;
     }
-    ul {
-      padding-left: 20px;
-    }
     .note {
       font-size: 0.9rem;
       color: #666;
@@ -104,10 +102,10 @@
       text-align: center;
       color: #aaa;
       font-size: 0.8rem;
-      margin: 40px 0 20px 0;
-      width: 100%;
+      margin: 40px 0 20px;
       padding: 10px 20px;
     }
+
     #topBtn {
       position: fixed;
       bottom: 30px;
@@ -115,18 +113,19 @@
       background: #007ACC;
       color: white;
       border: none;
-      padding: 12px 16px;
+      padding: 14px 18px;
       border-radius: 50%;
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       cursor: pointer;
       box-shadow: 0 4px 10px rgba(0,122,204,0.6);
-      transition: background 0.3s;
       display: none;
       z-index: 1000;
+      touch-action: manipulation;
     }
     #topBtn:hover {
       background: #004A99;
     }
+
     .content-collapsed {
       display: none;
     }
@@ -136,9 +135,7 @@
   </style>
 </head>
 <body>
-  <header>
-    退伍 2025 行程
-  </header>
+  <header>退伍 2025 行程</header>
   <main>
     <section>
       <h2 aria-expanded="true">Day 1｜8/4（一） 鳳山 → 台東 <span class="arrow">▼</span></h2>
@@ -161,16 +158,16 @@
               <td>自強(3000) 431</td>
               <td>12:59</td>
               <td>15:07</td>
-              <td>翔順機車(機車)</td>
+              <td>翔順機車</td>
               <td>$850</td>
               <td>$470</td>
               <td>$1232</td>
-              <td>熱氣球光雕FEAT無人機+煙火</td>
+              <td>熱氣球光雕、煙火</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/h-taitung-chun-yang/hotel/taitung-tw.html?ds=kxwMdD1ZA2UMuQSU" target="_blank" rel="noopener noreferrer">春秧無人別館</a></p>
+      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/h-taitung-chun-yang/hotel/taitung-tw.html" target="_blank">春秧無人別館</a></p>
     </section>
 
     <section>
@@ -194,20 +191,20 @@
               <td>自強(3000) 411</td>
               <td>07:43</td>
               <td>09:50</td>
-              <td>行易租車(機車)</td>
+              <td>行易租車</td>
               <td>$900</td>
               <td>$462</td>
               <td>$993</td>
-              <td>遠雄海洋世界門票+海洋體驗($3199)</td>
+              <td>遠雄門票＋海洋體驗</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/true-friend-hotel/hotel/hualien-tw.html?..." target="_blank" rel="noopener noreferrer">路境行旅花蓮文化館</a></p>
+      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/true-friend-hotel/hotel/hualien-tw.html" target="_blank">路境行旅</a></p>
     </section>
 
     <section>
-      <h2 aria-expanded="false">Day 3｜8/6（三） 花蓮 → 台北（大稻埕煙火） <span class="arrow">▶</span></h2>
+      <h2 aria-expanded="false">Day 3｜8/6（三） 花蓮 → 台北（煙火） <span class="arrow">▶</span></h2>
       <div class="table-container content-collapsed">
         <table>
           <thead>
@@ -236,7 +233,7 @@
           </tbody>
         </table>
       </div>
-      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/fortune-hiya-taipei/hotel/taipei-tw.html?..." target="_blank" rel="noopener noreferrer">承攜行旅台北重慶館</a></p>
+      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/fortune-hiya-taipei/hotel/taipei-tw.html" target="_blank">承攜行旅</a></p>
     </section>
 
     <section>
@@ -258,50 +255,47 @@
           <tbody>
             <tr>
               <td>和欣客運</td>
-              <td></td>
-              <td></td>
+              <td>--</td>
+              <td>--</td>
               <td>大眾運輸</td>
               <td>$0</td>
               <td>$760</td>
               <td>$0</td>
-              <td>8111/人</td>
+              <td>$8111/人</td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p class="note">結束愉快旅程!</p>
+      <p class="note">結束愉快旅程！</p>
     </section>
   </main>
 
   <button id="topBtn" title="回到頂部">↑</button>
-
-  <footer>
-    © 2025 你的環島行程小幫手
-  </footer>
+  <footer>© 2025 你的環島行程小幫手</footer>
 
   <script>
-    // 展開/收合功能
-    document.querySelectorAll('h2').forEach(sectionTitle => {
-      sectionTitle.addEventListener('click', () => {
-        const container = sectionTitle.nextElementSibling;
-        const arrow = sectionTitle.querySelector('.arrow');
+    // 展開/收合邏輯
+    document.querySelectorAll('h2').forEach(title => {
+      title.addEventListener('click', () => {
+        const container = title.nextElementSibling;
+        const arrow = title.querySelector('.arrow');
         const expanded = container.classList.contains('content-expanded');
 
         container.classList.toggle('content-expanded', !expanded);
         container.classList.toggle('content-collapsed', expanded);
         arrow.textContent = expanded ? '▶' : '▼';
-        sectionTitle.setAttribute('aria-expanded', !expanded);
+        title.setAttribute('aria-expanded', !expanded);
       });
     });
 
-    // 回到頂部按鈕邏輯
+    // 回頂部按鈕邏輯
     const topBtn = document.getElementById('topBtn');
     window.onscroll = () => {
-      topBtn.style.display = document.documentElement.scrollTop > 300 ? "block" : "none";
+      topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
     };
-    topBtn.addEventListener('click', () => {
+    topBtn.onclick = () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
+    };
   </script>
 </body>
 </html>
