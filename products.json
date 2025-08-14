@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1",
+    "name": "MacBook",
+    "type": "3C",
+    "img": "macbook.png",
+    "price": "1500"
+  },
+  {
+    "id": "2",
+    "name": "iPhone",
+    "type": "3C",
+    "img": "iphone.png",
+    "price": "2000"
+  },
+  {
+    "id": "3",
+    "name": "空氣清淨機",
+    "type": "生活用品",
+    "img": "airpurifier.png",
+    "price": "1000"
+  },
+  {
+    "id": "4",
+    "name": "掃地機器人",
+    "type": "生活用品",
+    "img": "robot.png",
+    "price": "800"
+  }
+]

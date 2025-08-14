@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuloop 商品頁</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- 導覽列 -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Nuloop</div>
+      <div class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="products.html" class="active">商品</a>
+        <a href="plans.html">方案</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="member.html">會員中心</a>
+      </div>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="section-title fade-in">商品篩選</div>
+      <div class="filter-group">
+        <button class="filter-btn active" data-type="all">全部</button>
+        <button class="filter-btn" data-type="3C">3C</button>
+        <button class="filter-btn" data-type="生活用品">生活用品</button>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title fade-in">商品展示</div>
+      <div class="product-list">
+        <!-- 商品卡片由 JS 動態生成 -->
+      </div>
+    </section>
+    <button class="cart-btn" title="租賃清單">🛒</button>
+    <div class="cart-drawer"></div>
+  </main>
+
+  <footer>
+    Nuloop &copy; 2025 循環好物智慧生活
+  </footer>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,301 +1,108 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>鳳山出發逆時針環島 2025 行程</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');
-    html, body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Noto Sans TC', sans-serif;
-      color: #333;
-      background: linear-gradient(135deg, #007ACC, #00B4F4);
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      line-height: 1.6;
-      font-size: 16px;
-      overscroll-behavior-y: none;
-    }
-    header {
-      background: #004A99;
-      color: white;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 2px;
-      width: 100%;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.3);
-    }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      background: white;
-      padding: 25px 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-    h2 {
-      border-bottom: 3px solid #007ACC;
-      padding-bottom: 8px;
-      margin-top: 40px;
-      color: #007ACC;
-      cursor: pointer;
-      user-select: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    h2:hover {
-      color: #004A99;
-    }
-    h2 .arrow {
-      font-size: 1.2rem;
-      transition: transform 0.3s ease;
-    }
-
-    .table-container {
-      width: 100%;
-      overflow-x: auto;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
-    }
-    thead th {
-      background-color: #007ACC;
-      color: white;
-      padding: 8px 12px;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      text-align: center;
-    }
-    tbody tr {
-      border-bottom: 1px solid #ddd;
-      transition: background-color 0.3s;
-    }
-    tbody tr:hover {
-      background-color: #e6f2ff;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px 12px;
-      text-align: center;
-    }
-    tr:nth-child(even) {
-      background-color: #f9faff;
-    }
-    .note {
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: 10px;
-      font-style: italic;
-    }
-    footer {
-      text-align: center;
-      color: #aaa;
-      font-size: 0.8rem;
-      margin: 40px 0 20px;
-      padding: 10px 20px;
-    }
-
-    #topBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background: #007ACC;
-      color: white;
-      border: none;
-      padding: 14px 18px;
-      border-radius: 50%;
-      font-size: 1.7rem;
-      cursor: pointer;
-      box-shadow: 0 4px 10px rgba(0,122,204,0.6);
-      display: none;
-      z-index: 1000;
-      touch-action: manipulation;
-    }
-    #topBtn:hover {
-      background: #004A99;
-    }
-
-    .content-collapsed {
-      display: none;
-    }
-    .content-expanded {
-      display: block;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Nuloop 循環好物智慧生活</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/img/logo.svg">
 </head>
 <body>
-  <header>退伍 2025 行程</header>
-  <main>
-    <section>
-      <h2 aria-expanded="true">Day 1｜8/4（一） 鳳山 → 台東 <span class="arrow">▼</span></h2>
-      <div class="table-container content-expanded">
-        <table>
-          <thead>
-            <tr>
-              <th>車次</th>
-              <th>發車時間</th>
-              <th>到達時間</th>
-              <th>交通方式</th>
-              <th>租車價格</th>
-              <th>火車票價</th>
-              <th>飯店價格</th>
-              <th>備註</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>自強(3000) 431</td>
-              <td>12:59</td>
-              <td>15:07</td>
-              <td>翔順機車</td>
-              <td>$850</td>
-              <td>$470</td>
-              <td>$1232</td>
-              <td>熱氣球光雕、煙火</td>
-            </tr>
-          </tbody>
-        </table>
+  <!-- 導覽列 -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Nuloop</div>
+      <div class="nav-links">
+      <a href="index.html">首頁</a>
+      <a href="products.html">商品</a>
+      <a href="plans.html">方案</a>
+      <a href="contact.html">聯絡我們</a>
+      <a href="member.html">會員中心</a>
+      <a href="login.html">登入</a>
+      <a href="register.html">註冊</a>
       </div>
-      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/h-taitung-chun-yang/hotel/taitung-tw.html" target="_blank">春秧無人別館</a></p>
-    </section>
-
-    <section>
-      <h2 aria-expanded="false">Day 2｜8/5（二） 台東 → 花蓮 <span class="arrow">▶</span></h2>
-      <div class="table-container content-collapsed">
-        <table>
-          <thead>
-            <tr>
-              <th>車次</th>
-              <th>發車時間</th>
-              <th>到達時間</th>
-              <th>交通方式</th>
-              <th>租車價格</th>
-              <th>火車票價</th>
-              <th>飯店價格</th>
-              <th>備註</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>自強(3000) 411</td>
-              <td>07:43</td>
-              <td>09:50</td>
-              <td>行易租車</td>
-              <td>$900</td>
-              <td>$462</td>
-              <td>$993</td>
-              <td>遠雄門票＋海洋體驗</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="burger">
+        <span></span><span></span><span></span>
       </div>
-      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/true-friend-hotel/hotel/hualien-tw.html" target="_blank">路境行旅</a></p>
-    </section>
+    </nav>
+  </header>
 
-    <section>
-      <h2 aria-expanded="false">Day 3｜8/6（三） 花蓮 → 台北（煙火） <span class="arrow">▶</span></h2>
-      <div class="table-container content-collapsed">
-        <table>
-          <thead>
-            <tr>
-              <th>車次</th>
-              <th>發車時間</th>
-              <th>到達時間</th>
-              <th>交通方式</th>
-              <th>租車價格</th>
-              <th>火車票價</th>
-              <th>飯店價格</th>
-              <th>備註</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>自強(3000) 411</td>
-              <td>09:55</td>
-              <td>12:25</td>
-              <td>大眾運輸</td>
-              <td>$0</td>
-              <td>$583</td>
-              <td>$1300</td>
-              <td>大稻埕煙火</td>
-            </tr>
-          </tbody>
-        </table>
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text fade-in">
+        <div class="hero-title">循環好物<br>智慧生活</div>
+        <div class="hero-sub">想用就用・想換就換</div>
+        <button class="hero-btn btn" onclick="location.href='products.html'">開始租賃</button>
       </div>
-      <p class="note">住宿：<a href="https://www.agoda.com/zh-tw/fortune-hiya-taipei/hotel/taipei-tw.html" target="_blank">承攜行旅</a></p>
-    </section>
-
-    <section>
-      <h2 aria-expanded="false">Day 4｜8/7（四） 台北 → 鳳山 <span class="arrow">▶</span></h2>
-      <div class="table-container content-collapsed">
-        <table>
-          <thead>
-            <tr>
-              <th>車次</th>
-              <th>發車時間</th>
-              <th>到達時間</th>
-              <th>交通方式</th>
-              <th>租車價格</th>
-              <th>客運票價</th>
-              <th>飯店價格</th>
-              <th>總額</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>和欣客運</td>
-              <td>--</td>
-              <td>--</td>
-              <td>大眾運輸</td>
-              <td>$0</td>
-              <td>$760</td>
-              <td>$0</td>
-              <td>$8111/人</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="hero-img fade-in">
+        <img src="assets/img/laptop.png" alt="Nuloop Hero Banner">
       </div>
-      <p class="note">結束愉快旅程！</p>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <button id="topBtn" title="回到頂部">↑</button>
-  <footer>© 2025 你的環島行程小幫手</footer>
+  <!-- 三大特色 -->
+  <section>
+    <div class="section-title fade-in">三大特色</div>
+    <div class="features">
+      <div class="feature-card fade-in">
+        <img src="assets/img/feature1.svg" alt="最新科技隨租">
+        <h4>最新科技隨租</h4>
+        <div>3C/生活用品彈性租賃，隨時升級</div>
+      </div>
+      <div class="feature-card fade-in">
+        <img src="assets/img/feature2.svg" alt="生活好物隨換">
+        <h4>生活好物隨換</h4>
+        <div>不再囤積，物盡其用，環保又省錢</div>
+      </div>
+      <div class="feature-card fade-in">
+        <img src="assets/img/feature3.svg" alt="彈性方案零壓力">
+        <h4>彈性方案・零壓力</h4>
+        <div>短租/長租皆可，彈性合約，輕鬆無負擔</div>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    // 展開/收合邏輯
-    document.querySelectorAll('h2').forEach(title => {
-      title.addEventListener('click', () => {
-        const container = title.nextElementSibling;
-        const arrow = title.querySelector('.arrow');
-        const expanded = container.classList.contains('content-expanded');
+  <!-- 熱門商品 -->
+  <section>
+    <div class="section-title fade-in">熱門商品</div>
+    <div class="product-list">
+      <div class="product-card fade-in">
+        <img src="assets/img/macbook.png" alt="MacBook">
+        <h3>MacBook</h3>
+        <p>NT$1,500 / 月</p>
+        <button class="add-btn btn" data-id="1">立即租賃</button>
+      </div>
+      <div class="product-card fade-in">
+        <img src="assets/img/iphone.png" alt="iPhone">
+        <h3>iPhone</h3>
+        <p>NT$2,000 / 月</p>
+        <button class="add-btn btn" data-id="2">立即租賃</button>
+      </div>
+      <div class="product-card fade-in">
+        <img src="assets/img/airpurifier.png" alt="空氣清淨機">
+        <h3>空氣清淨機</h3>
+        <p>NT$1,000 / 月</p>
+        <button class="add-btn btn" data-id="3">立即租賃</button>
+      </div>
+      <div class="product-card fade-in">
+        <img src="assets/img/robot.png" alt="掃地機器人">
+        <h3>掃地機器人</h3>
+        <p>NT$800 / 月</p>
+        <button class="add-btn btn" data-id="4">立即租賃</button>
+      </div>
+    </div>
+  </section>
 
-        container.classList.toggle('content-expanded', !expanded);
-        container.classList.toggle('content-collapsed', expanded);
-        arrow.textContent = expanded ? '▶' : '▼';
-        title.setAttribute('aria-expanded', !expanded);
-      });
-    });
+  <!-- 租賃清單按鈕與抽屜 -->
+  <button class="cart-btn" title="租賃清單">🛒</button>
+  <div class="cart-drawer"></div>
 
-    // 回頂部按鈕邏輯
-    const topBtn = document.getElementById('topBtn');
-    window.onscroll = () => {
-      topBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-    };
-    topBtn.onclick = () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    };
-  </script>
+  <!-- Footer -->
+  <footer>
+    Nuloop &copy; 2025 循環好物智慧生活
+  </footer>
+
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

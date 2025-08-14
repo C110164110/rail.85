@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>會員中心 - Nuloop</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Nuloop</div>
+      <div class="nav-links">
+      <a href="index.html">首頁</a>
+        <a href="products.html">商品</a>
+        <a href="plans.html">方案</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="member.html">會員中心</a>
+        <a href="login.html">登入</a>
+        <a href="register.html">註冊</a>
+      </div>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="section-title fade-in">我的租賃</div>
+      <div id="rental-list" class="features"></div>
+    </section>
+  </main>
+  <footer>
+    Nuloop &copy; 2025 循環好物智慧生活
+  </footer>
+  <script src="assets/js/script.js"></script>
+  <script>
+    // 檢查是否已登入（localStorage 有 token）
+    if (!localStorage.getItem('nuloopToken')) {
+      location.href = 'login.html';
+    }
+  </script>
+  <script>
+    // 假資料
+    const rentals = [
+      {
+        name: "MacBook",
+        img: "macbook.png",
+        start: "2024/08/01",
+        end: "2024/11/01",
+        left: 20
+      },
+      {
+        name: "iPhone",
+        img: "iphone.png",
+        start: "2024/07/01",
+        end: "2024/10/01",
+        left: 10
+      }
+    ];
+    const rentalList = document.getElementById('rental-list');
+    rentals.forEach(r => {
+      rentalList.innerHTML += `
+        <div class="feature-card fade-in" style="min-width:240px;">
+          <img src="assets/img/${r.img}" alt="${r.name}" style="width:80px;height:80px;margin-bottom:10px;">
+          <h4>${r.name}</h4>
+          <div>租期：${r.start} ~ ${r.end}</div>
+          <div>剩餘：${r.left} 天</div>
+          <div style="margin-top:12px;">
+            <button class="btn" onclick="alert('續租功能 DEMO')">續租</button>
+            <button class="btn" onclick="alert('換新功能 DEMO')">換新</button>
+            <button class="btn" onclick="alert('買下功能 DEMO')">買下</button>
+          </div>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

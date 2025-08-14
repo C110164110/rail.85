@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>註冊 - Nuloop</title>
+  <link rel="stylesheet" href="assets/css/style3.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Nuloop</div>
+      <div class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="products.html">商品</a>
+        <a href="plans.html">方案</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="member.html">會員中心</a>
+        <a href="login.html">登入</a>
+        <a href="register.html">註冊</a>
+      </div>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="section-title fade-in">會員註冊</div>
+      <form id="register-form" class="fade-in" style="max-width:340px;margin:auto;">
+        <label for="name">姓名：</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">密碼：</label>
+        <input type="password" id="password" name="password" required minlength="6">
+        <label for="confirm">確認密碼：</label>
+        <input type="password" id="confirm" name="confirm" required minlength="6">
+        <button type="submit">註冊</button>
+        <div id="register-msg" style="color:#e74c3c;margin-top:10px;"></div>
+      </form>
+      <div style="text-align:center;margin-top:16px;">
+        已有帳號？<a href="login.html" style="color:#1abc9c;">登入</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Nuloop &copy; 2025 循環好物智慧生活
+  </footer>
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirm = document.getElementById('confirm').value;
+      const msg = document.getElementById('register-msg');
+      msg.textContent = '';
+      if(password !== confirm){
+        msg.textContent = '兩次密碼不一致';
+        return;
+      }
+      fetch('/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data.error){
+          msg.textContent = data.error;
+        }else{
+          alert('註冊成功，請登入！');
+          location.href = 'login.html';
+        }
+      })
+      .catch(() => { msg.textContent = '伺服器錯誤，請稍後再試'; });
+    });
+  </script>
+</body>
+</html>

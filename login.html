@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登入 - Nuloop</title>
+  <link rel="stylesheet" href="assets/css/style2.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Nuloop</div>
+      <div class="nav-links">
+        <a href="index.html">首頁</a>
+        <a href="products.html">商品</a>
+        <a href="plans.html">方案</a>
+        <a href="contact.html">聯絡我們</a>
+        <a href="member.html">會員中心</a>
+        <a href="login.html">登入</a>
+        <a href="register.html">註冊</a>
+      </div>
+      <div class="burger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <div class="section-title fade-in">會員登入</div>
+      <form id="login-form" class="fade-in" style="max-width:340px;margin:auto;">
+        <label for="email">電子郵件：</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">密碼：</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">登入</button>
+        <div id="login-msg" style="color:#f77769;margin-top:10px;"></div>
+      </form>
+      <div style="text-align:center;margin-top:16px;">
+        還沒有帳號？<a href="register.html" style="color:#1abc9c;">註冊</a>
+      </div>
+      <div style="text-align:center;margin-top:24px;">
+        <button onclick="window.location.href='/auth/google'" class="btn" style="background:#fff;color:#444;border:1px solid #ccc;">
+          <img src="https://developers.google.com/identity/images/g-logo.png" style="width:20px;vertical-align:middle;margin-right:8px;">
+          使用 Google 帳號登入
+        </button>
+      </div>
+    </section>
+  </main>
+  <footer>
+    Nuloop &copy; 2025 循環好物智慧生活
+  </footer>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const msg = document.getElementById('login-msg');
+      msg.textContent = '';
+      fetch('/api/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      })
+      .then(res => res.json())
+      .then(data => {
+        if(data.token){
+          localStorage.setItem('nuloopToken', data.token);
+          location.href = 'member.html';
+        }else{
+          msg.textContent = data.error || '登入失敗';
+        }
+      })
+      .catch(() => { msg.textContent = '伺服器錯誤，請稍後再試'; });
+    });
+
+    // 檢查 URL 是否有 token 參數（Google OAuth 登入成功時）
+    const urlParams = new URLSearchParams(window.location.search);
+    const token = urlParams.get('token');
+    if(token){
+      localStorage.setItem('nuloopToken', token);
+      location.href = 'member.html';
+    }
+  </script>
+</body>
+</html>

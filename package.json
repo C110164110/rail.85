@@ -1,0 +1,23 @@
+{
+  "name": "nuloop-site",
+  "version": "1.0.0",
+  "description": "## 專案簡介 Nuloop 是一個高質感的互動網站，專注於提供租賃服務的商品展示。網站設計以科技感和穩重感為主，使用青藍綠和深灰色作為主色系，並搭配亮黃色作為重點按鈕的輔助色。網站具備響應式設計，適用於各種裝置，並提供流暢的使用者體驗。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.17.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-line": "^0.0.4"
+  }
+}
